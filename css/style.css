@@ -1,0 +1,517 @@
+@import url(./font.css);
+
+@import url(./partial/_variable.css);
+
+
+/* CSS for hover effect */
+.navbar-nav .nav-link {
+    color: black; /* Default color */
+    margin-right: 20px; /* Space between links */
+}
+
+.navbar-nav .nav-link:hover {
+    color: purple !important; /* Change color on hover */
+    text-decoration: underline; /* Optional: underline text on hover */
+    font-weight: bold;
+}
+
+.site-main .site-banner .site-title h3::after
+{
+    content: "";
+    height: 2px;
+    width: 26vw;
+    background: black;
+    display: inline-block;
+    margin-left: 5%;
+    transform: translateY(-10px);
+}
+
+@media (max-width: 992px) {
+    .navbar-brand img {
+        width: 200px; /* Adjust logo size for smaller screens */
+        height: auto;
+        padding-left: 0;
+    }
+    .navbar-nav {
+        text-align: center; /* Center links on smaller screens */
+    }
+    .navbar-nav .nav-link {
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between links on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 150px; /* Further adjust logo size for very small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        width: 100px; /* Further adjust logo size for very small screens */
+    }
+}
+
+
+
+/* Custom styles for the site banner */
+.site-banner {
+    padding: 100px 120px;
+
+}
+
+.site-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.title-text {
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Text color */
+}
+
+.button 
+{
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 4px;
+
+
+}
+
+.button.primary-button
+{
+    background-color:rgb(86, 25, 147);
+    background-clip: padding-box;
+    color: white;
+    transition: background .6s ease;
+    box-shadow:var(--box-shadow); ;
+
+}
+.button.primary-button:hover
+{
+    background-color: whitesmoke;
+    background-clip: padding-box;
+    color: black;
+}
+.button.primary-button:after
+{
+    position:absolute;
+    top: -2px;left:-2px;
+    bottom: -2px;
+    right:-2px;
+    content: '';
+    z-index: -1;
+    border-radius: 4px;
+}
+.button.secondary-button
+{
+    margin-left: 10px;
+    background-color:white;
+    background-clip: padding-box;
+    color: black;
+    transition: background .6s ease;
+    box-shadow:var(--box-shadow);
+    border: 1px solid black;
+    border-radius: 4px;
+
+}
+.button.secondary-button:hover
+{
+    background-color: rgb(86, 25, 147);
+    background-clip: padding-box;
+    color: white
+}
+.button.secondary-button:after
+{
+    position:absolute;
+    top: -2px;left:-2px;
+    bottom: -2px;
+    right:-2px;
+    content: '';
+    z-index: -1;
+    border-radius: 4px;
+}
+
+
+.site-main.about-area
+{
+    padding: 8rem 5rem;
+}
+
+.site-main.about-area.about-title h2>span
+{
+   
+    display: block;
+    font: normal bold 49px/60px var(--roboto);
+    letter-spacing: 21px;
+}
+
+.site-main.about-area.about-title .paragraph>p
+{
+    padding: 4rem 0;
+
+
+
+}
+
+
+
+
+@media (max-width: 768px) {
+    .site-title {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .site-buttons {
+        justify-content: center;
+    }
+}
+
+.single-brand a {
+    display: inline-block;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.single-brand a:hover {
+    box-shadow:var(--box-shadow);
+    transform: scale(1.1);
+}
+
+.call-now a:hover{
+   
+    transform: scale(1.1);
+    color: rgb(86, 25, 147);
+
+} 
+
+
+
+.active:hover{
+    color: rgb(86, 25, 147);
+    transform: scale(1.1);
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+
+
+.inactive:hover{
+    color: rgb(86, 25, 147);
+    transform: scale(1.1);
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.services:hover
+{
+    box-shadow: var(--box-shadow);
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+}
+
+
+.button-group button {
+    transition: all 0.1s ease; /* Smooth transition for hover effect */
+}
+
+.button-group button:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    color:blueviolet; /* Dark text color on hover */
+    border: 1px solid #ccc; /* Add a border on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+
+.img a:hover img{
+  filter: brightness(1.1) drop-shadow(4px 10px 30px);
+}
+
+
+
+
+.site-main.about-area .client {
+    background: #ffffff10;
+    box-shadow: var(--box-shadow);
+    margin: 3rem 0rem;
+   
+}
+
+.site-main.about-area .client-img {
+    padding: 2rem;
+}
+
+.site-main.about-area .about-client {
+    padding-top: 2rem;
+}
+
+.site-main.about-area .about-client h4 {
+    font: normal 500 21px/20px var(--roboto);
+}
+
+.site-main.about-area .about-client p {
+    font-size: 14px;
+}
+
+.owl-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+
+.site-main.subscribe-us-area .subscribe {
+    background: url('../img/subscribe-bg.png') no-repeat;
+    padding: 10rem 0;
+    margin: 3rem auto;
+}
+
+.site-main .subscribe-us-area .subscribe .subscribe-title h4 {
+    font: normal 700 30px/30px var(--roboto);
+    color: whitesmoke;
+}
+
+.site-main .subscribe-us-area .subscribe .subscribe-title p {
+    color: whitesmoke;
+    padding: 1rem 4rem;
+}
+
+.site-main .subscribe-us-area .subscribe form .input-textbox input {
+    width: 400px;
+    padding: 1.5rem 1rem;
+    border: 1px solid whitesmoke;
+    background: transparent;
+    color: white;
+    font: normal 500 17px/20px var(--roboto);
+}
+
+.site-main .subscribe-us-area .subscribe form .input-textbox input::placeholder {
+    color: whitesmoke;
+}
+
+.site-main .subscribe-us-area .subscribe form .btn-submit button {
+    background: whitesmoke;
+    color: #000;
+    padding: .7rem 2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.site-main .subscribe-us-area .subscribe form .btn-submit button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+/* Default anchor styles */
+.footer-area a {
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for anchor tags */
+.footer-area a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+    
+}
+
+/* Specific styles for social media icons */
+.footer-area .social a i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-area .social a:hover i {
+    color: white;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Initial state before animation */
+.element-item {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Animation classes */
+.element-item.animate-left {
+    animation: slideInLeft 1s forwards;
+}
+
+.element-item.animate-right {
+    animation: slideInRight 1s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.client {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.client.animate-fade-in-up {
+    animation: fadeInUp 1s forwards;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.services {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.services.animate-fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.site-title {
+    opacity: 0;
+    animation: fadeInLeft 1.5s forwards;
+}
+
+.site-banner img {
+    opacity: 0;
+    animation: fadeInRight 1.5s forwards;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about-title {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.about-image img {
+    opacity: 0;
+    animation: slideInLeft 1s forwards;
+}
